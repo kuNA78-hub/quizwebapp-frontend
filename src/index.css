@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 221 83% 53%;
+    --radius: 0rem;
+  }
+
+  body {
+    @apply bg-[#f0f4f8];
+    background-image: 
+      linear-gradient(to right, #cbd5e1 1px, transparent 1px),
+      linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border-2 border-black;
+  }
+  .brutal-shadow {
+    @apply shadow-[8px_8px_0px_0px_rgba(0,0,0,1)];
+  }
+  .brutal-shadow-sm {
+    @apply shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+  }
+  .brutal-interactive {
+    @apply transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none;
+  }
+}
